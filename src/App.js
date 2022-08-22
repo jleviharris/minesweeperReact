@@ -6,10 +6,10 @@ import ButtonBoard from "./Components/ButtonBoard";
 
 //TODO:
 // create board
-// create numer of flags
+// have flags count down when placed
 // left click open , right click flag
 // create logic to see what number a block should be if touching a mine
-
+// 0 = mine , 1 = empty
 
 function App() {
   let numCols = 25;
@@ -19,7 +19,7 @@ function App() {
     const rows = [];
     for (let i = 0; i < numRows; i++) {
       rows.push(
-        Array.from(Array(numCols), () => (Math.random() > 0.5 ? 1 : 0))
+        Array.from(Array(numCols), () => (Math.random() > 0.1 ? 1 : 0))
       );
     }
     return rows;
@@ -41,7 +41,12 @@ function App() {
 
   return (
     <div className="App">
-      <ButtonBoard />
+      <ButtonBoard
+        grid={grid}
+        setGrid={setGrid}
+        numCols={numCols}
+        numRows={numRows}
+      />
       <GameBoard grid={grid} setGrid={setGrid} numCols={numCols} />
     </div>
   );

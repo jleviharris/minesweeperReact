@@ -1,7 +1,8 @@
 import React from "react";
 import Timer from "./Timer";
+import Flags from "./Flags";
 
-const ButtonBoard = ({ numRows, numCols, setGrid }) => {
+const ButtonBoard = ({ numRows, numCols, setGrid, grid }) => {
   function refreshPage() {
     window.location.reload(false);
   }
@@ -13,6 +14,9 @@ const ButtonBoard = ({ numRows, numCols, setGrid }) => {
         </li>
         <li>
           <Timer />
+        </li>
+        <li>
+          <Flags numCols={numCols} numRows={numRows} grid={grid} />
         </li>
       </ul>
     </div>
