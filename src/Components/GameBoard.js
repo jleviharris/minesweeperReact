@@ -14,13 +14,15 @@ const GameBoard = ({ grid, numCols, numRows, setGrid }) => {
       {grid.map((rows, i) =>
         rows.map((col, k) => (
           <div
+            className="singleBox"
             key={i - k}
             // onClick={}
             style={{
               width: 22,
               height: 22,
-              backgroundColor: "black",
+              backgroundColor: "#31cc5f",
               border: "1px solid #595959",
+              "&:hover": { backgroundColor: "black" },
             }}
           />
         ))

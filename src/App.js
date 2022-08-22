@@ -6,9 +6,10 @@ import ButtonBoard from "./Components/ButtonBoard";
 
 //TODO:
 // create board
-//create timer
 // create numer of flags
 // left click open , right click flag
+// create logic to see what number a block should be if touching a mine
+
 
 function App() {
   let numCols = 25;

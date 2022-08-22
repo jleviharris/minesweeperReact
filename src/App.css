@@ -37,6 +37,15 @@
 .countContainer h2 {
   margin-top: 5px;
 }
+.singleBox :hover {
+  background-color: black;
+}
+.singleBox {
+  width: 22px;
+  height: 22px;
+  background-color: #31cc5f;
+  border: 1px solid #595959;
+}
 
 @media only screen and (max-width: 500px) {
   .boardContainer {
