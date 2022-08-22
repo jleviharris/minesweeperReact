@@ -14,6 +14,7 @@ import ButtonBoard from "./Components/ButtonBoard";
 function App() {
   let numCols = 25;
   let numRows = 25;
+  const [running, setRunning] = useState(false);
 
   const [grid, setGrid] = useState(() => {
     const rows = [];
@@ -46,8 +47,16 @@ function App() {
         setGrid={setGrid}
         numCols={numCols}
         numRows={numRows}
+        running={running}
+        setRunning={setRunning}
       />
-      <GameBoard grid={grid} setGrid={setGrid} numCols={numCols} />
+      <GameBoard
+        grid={grid}
+        setGrid={setGrid}
+        numCols={numCols}
+        running={running}
+        setRunning={setRunning}
+      />
     </div>
   );
 }

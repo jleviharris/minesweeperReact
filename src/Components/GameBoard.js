@@ -2,15 +2,27 @@ import React from "react";
 import { useState } from "react";
 import produce from "immer";
 
-const GameBoard = ({ grid, numCols, numRows, setGrid }) => {
+const GameBoard = ({
+  grid,
+  numCols,
+  numRows,
+  setGrid,
+  running,
+  setRunning,
+}) => {
   function refreshPage() {
     window.location.reload(false);
   }
 
   function handleClick(i, k) {
+    if (!running) {
+      setRunning(true);
+    }
     if (grid[i][k] === 0) {
       alert("You hit a mine");
       refreshPage();
+    } else if (grid[i][k] === 1) {
+      console.log("no Mine");
     }
   }
 

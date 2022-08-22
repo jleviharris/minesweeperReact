@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import React from "react";
 
-const Timer = () => {
+const Timer = ({running, setRunning}) => {
   const [time, setTime] = useState(0);
-  const [running, setRunning] = useState(false);
+  // const [running, setRunning] = useState(false);
 
   useEffect(() => {
     let interval;
